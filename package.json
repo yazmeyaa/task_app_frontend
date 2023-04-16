@@ -1,0 +1,58 @@
+{
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "@types/react-router-dom": "^5.3.3",
+    "immer": "^9.0.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router": "^6.10.0",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "^5.0.1",
+    "remixicon": "^3.1.1",
+    "remixicon-react": "^1.0.0",
+    "sass": "^1.61.0",
+    "typescript": "^4.9.5",
+    "uuid": "^9.0.0"
+  },
+  "name": "yazmeyaa_task_app",
+  "version": "0.0.1",
+  "description": "TO-DO app ",
+  "main": "index.ts",
+  "scripts": {
+    "build": "react-scripts build",
+    "start": "react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yazmeyaa/task_app_frontend.git"
+  },
+  "keywords": [
+    "task",
+    "pet_project",
+    "typescript",
+    "react"
+  ],
+  "author": "yazmeyaa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yazmeyaa/task_app_frontend/issues"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "@types/uuid": "^9.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

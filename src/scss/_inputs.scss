@@ -1,0 +1,42 @@
+.searchbar {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-size: 14px;
+        color: #646464;
+    }
+
+    .input_container {
+        box-sizing: border-box;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid black;
+        border-radius: 6px;
+        
+
+
+        button {
+            background-color: transparent;
+            border: none;
+            padding: 4px 10px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-out;
+            border-radius: 6px;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.25);
+            }
+        }
+
+        input {
+            background-color: transparent;
+            border: none;
+            padding: 6px;
+            &:focus {
+                border: none;
+                outline: none;
+            }
+        }
+    }
+}
