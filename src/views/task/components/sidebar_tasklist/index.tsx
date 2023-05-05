@@ -7,8 +7,9 @@ import AddButton from 'remixicon-react/AddLineIcon'
 import { TaskList } from "views/task/components/task_list"
 import { SearchBar } from "components/inputs/searchbar"
 import { Task } from "types/task"
-import { useAppSelector } from "hooks/redux"
+import { useAppDispatch, useAppSelector } from "hooks/redux"
 import { RootState } from "redux/store"
+import { useActions } from "hooks/useActions"
 
 
 export const TaskListSideBar = () => {
@@ -16,6 +17,15 @@ export const TaskListSideBar = () => {
     const inputRef = useRef<HTMLInputElement>(null)
     const taskList = useAppSelector((state: RootState) => state.tasks.list)
     const [filteredTasks, setFilteredTasks] = useState<Task[]>([])
+    const {loadTaskList} = useActions()
+    
+
+    useEffect(() => {
+        loadTaskList({
+            page: 1,
+            perPage: 10
+        })
+    }, [])
 
 
     function openModal() {
@@ -26,7 +36,7 @@ export const TaskListSideBar = () => {
         setModalVisibility(false)
     }
 
-    function onSuccessTaskCreated(task: Task) {
+    function onSuccessTaskCreated() {
         closeModal()
     }
 

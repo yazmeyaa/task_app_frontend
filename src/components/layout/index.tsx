@@ -1,23 +1,18 @@
-import { Footer } from "components/footer"
-import { Header } from "components/header/header"
-import { SideBar } from "components/sidebar"
-import { FunctionComponent, ReactNode } from "react"
+import { FunctionComponent, ReactNode } from "react";
+import { AppHeader } from "components/header/header";
+import { Content } from "carbon-components-react";
+import { GlobalStyle } from "components/global";
 
 interface LayoutProps {
-    children: ReactNode
+  children: ReactNode;
 }
 
 export const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
-    return (
-        <main className="app_layout">
-            <Header />
-            <div className="app_layout__content">
-                <SideBar className="app_menu_sidebar">
-                    some
-                </SideBar>
-                {children}
-            </div>
-            <Footer />
-        </main>
-    )
-}
+  return (
+    <main>
+        <GlobalStyle />
+      <AppHeader />
+      {children}
+    </main>
+  );
+};

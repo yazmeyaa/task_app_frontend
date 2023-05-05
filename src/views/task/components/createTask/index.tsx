@@ -5,9 +5,10 @@ import AddIcon from 'remixicon-react/AddLineIcon'
 import { TasksActionsEnum } from "redux/actions/tasks"
 import { CreateTaskOptions, createNewTask } from "tools/createTask"
 import { Task } from "types/task"
+import { ApiClient } from "tools/ApiClient"
 
 interface CreateTaskProps {
-    onSuccess: (task: Task) => void
+    onSuccess: () => void
     onError?: (error: Error) => void
 }
 
@@ -34,7 +35,9 @@ export const CreateTask: FunctionComponent<CreateTaskProps> = ({ onSuccess }) =>
             type: TasksActionsEnum.ADD_TASK,
             payload: newTask
         })
-        onSuccess(newTask)
+
+        ApiClient.createTask(taskOptions)
+        onSuccess()
     }
 
     return (

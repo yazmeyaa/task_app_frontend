@@ -1,9 +1,14 @@
 import { Layout } from "components/layout"
-import { AppProviders } from "components/others/app_providers"
+import { AppProviders } from "components/providers"
 import { Router } from "routes"
-import './scss/main.scss'
+import { useEffect } from "react"
+import { ApiClient } from "tools/ApiClient"
 
 export const App = () => {
+
+    ApiClient.checkAuth()
+    .then(console.log)
+    .catch(console.error)
 
     return (
         <AppProviders>

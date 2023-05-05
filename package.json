@@ -1,7 +1,12 @@
 {
   "dependencies": {
+    "@carbon/icons-react": "^11.18.0",
+    "@carbon/react": "^1.27.0",
     "@reduxjs/toolkit": "^1.9.3",
     "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.26",
+    "carbon-components": "^10.58.3",
+    "carbon-components-react": "^8.27.0",
     "immer": "^9.0.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -12,6 +17,7 @@
     "remixicon": "^3.1.1",
     "remixicon-react": "^1.0.0",
     "sass": "^1.61.0",
+    "styled-components": "^5.3.10",
     "typescript": "^4.9.5",
     "uuid": "^9.0.0"
   },
@@ -39,6 +45,8 @@
     "url": "https://github.com/yazmeyaa/task_app_frontend/issues"
   },
   "devDependencies": {
+    "@types/carbon__icons-react": "^11.16.0",
+    "@types/carbon-components-react": "^7.55.2",
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
     "@types/uuid": "^9.0.1"
