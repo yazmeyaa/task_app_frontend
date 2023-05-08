@@ -1,4 +1,4 @@
 import { violet } from './violet'
-import {blue} from './blue'
+import { blue } from './blue'
 
-export { violet, blue }
+export const themes = { violet, blue } as const 

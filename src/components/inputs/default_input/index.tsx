@@ -1,26 +1,29 @@
-import { ChangeEvent, forwardRef } from "react"
+import { ChangeEvent, forwardRef, InputHTMLAttributes } from "react";
+import { Container, Input, Label } from "./styled";
 
-
-interface SearchBarProps {
-    label: string
-    placeholder?: string
-    name?: string
-    onInput?: (event: ChangeEvent<HTMLInputElement>) => void
-    error?: boolean
+interface SearchBarProps extends InputHTMLAttributes<HTMLInputElement> {
+  label: string;
+  placeholder?: string;
+  name?: string;
+  onInput?: (event: ChangeEvent<HTMLInputElement>) => void;
+  error?: boolean;
 }
 
-type Ref = HTMLInputElement
+type Ref = HTMLInputElement;
 
-export const PrimaryInput = forwardRef<Ref, SearchBarProps>(({ label, placeholder, name, onInput, error }, ref) => {
-    const className = `input_container ${error ? 'error' : ''}`
+export const PrimaryInput = forwardRef<Ref, SearchBarProps>(
+  ({ label, placeholder, name, onInput, error, ...rest }, ref) => {
     return (
-        <div className="primary_input">
-            <label htmlFor={name}>
-                <span>{label}</span>
-            </label>
-            <div className={className} >
-                <input onInput={onInput} name={name ?? label} placeholder={placeholder ?? 'Найти...'} ref={ref} />
-            </div>
-        </div>
-    )
-})
+      <Container>
+        <Label htmlFor={name}>{label}</Label>
+        <Input
+          onInput={onInput}
+          name={name ?? label}
+          placeholder={placeholder ? placeholder : undefined}
+          ref={ref}
+          {...rest}
+        />
+      </Container>
+    );
+  }
+);

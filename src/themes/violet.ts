@@ -1,7 +1,7 @@
 import { Theme } from "types/theme"
 
 const violet: Theme = {
-    name: "dark",
+    name: "violet",
     colors: {
         ui_primary: "#443C68",
         ui_primary_hover: "#18122B",

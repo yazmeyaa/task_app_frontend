@@ -44,19 +44,7 @@ function RegsitrationPage() {
     }
     return (
         <main className="auth_page_wrapper">
-            <figure>
-                <strong>Task app</strong>
-                <img draggable="false" src="assets/images/task_logo.svg" />
-            </figure>
-            <h2>Регистрация</h2>
-            <form onSubmit={handleSubmit}>
-                <PrimaryInput label="Email" name="email" />
-                <PrimaryInput label="Имя пользователя" name="username" />
-                <PrimaryInput label="Пароль" name="password" />
-                <PrimaryInput label="Подтверждение пароля" name="confirmPassword" />
-                <PrimaryButton>Войти</PrimaryButton>
-            </form>
-            <Link to={'/'}>Login</Link>
+            {"hi :>"}
         </main>
     )
 }

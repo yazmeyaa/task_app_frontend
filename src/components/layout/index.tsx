@@ -1,7 +1,7 @@
 import { FunctionComponent, ReactNode } from "react";
-import { AppHeader } from "components/header/header";
-import { Content } from "carbon-components-react";
+import { AppHeader } from "components/header";
 import { GlobalStyle } from "components/global";
+import { Content } from "./styled";
 
 interface LayoutProps {
   children: ReactNode;
@@ -9,10 +9,10 @@ interface LayoutProps {
 
 export const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
   return (
-    <main>
-        <GlobalStyle />
+    <>
+      <GlobalStyle />
       <AppHeader />
-      {children}
-    </main>
+      <Content>{children}</Content>
+    </>
   );
 };
